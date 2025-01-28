@@ -10,6 +10,8 @@ COPY package.json package.json
 # Устанавливаем зависимости
 RUN npm install
 
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
 # Копируем всё содержимое проекта в контейнер
 COPY . .
 
