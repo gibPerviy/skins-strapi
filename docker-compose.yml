@@ -14,14 +14,14 @@ services:
   backend:
     build:
       context: ./backend
-      networks:
-        - default
+    networks:
+      - default
 
   frontend:
     build:
       context: ./frontend
-      networks:
-        - default
+    networks:
+      - default
 
 networks:
   default:
