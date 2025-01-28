@@ -1,6 +1,3 @@
-networks:
-  default:
-
 services:
   nginx:
     image: nginx:stable-alpine
@@ -25,3 +22,7 @@ services:
       context: ./frontend
       networks:
         - default
+
+networks:
+  default:
+    driver: bridge
